@@ -24,3 +24,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cloud-sdk-java
+        path: /home/runner/work/cloud-sdk-java/cloud-sdk-java/target/cloud-sdk-java-0.1.jar
